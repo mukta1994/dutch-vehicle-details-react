@@ -1,7 +1,6 @@
 import React, { } from "react";
 
 const Details =(props)=> {
-    console.log(props.data)
     var noimages;
 if (props.data.length===0) {
   noimages = <div> No images found</div> ;

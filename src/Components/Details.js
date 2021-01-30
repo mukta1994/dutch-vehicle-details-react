@@ -4,8 +4,7 @@ import Moment from 'moment';
 
 
 const Details = (props) => {
-    Moment.locale('en');
-    console.log(props.data.brandstof)
+    // Moment.locale('en');
     return (
         <Card className="details-card">
             <div>

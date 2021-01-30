@@ -1,9 +1,9 @@
 import React, { useState } from "../../node_modules/react";
-import { getVehicleData, getRelatedImages, getVehiclenumberPlates } from '../Api/api';
 import Details from '../Components/Details'
 import Imagerow from '../Components/Imagerow'
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
+import { getVehicleData, getRelatedImages, getVehiclenumberPlates } from '../Api/api';
 
 
 const Vehicle = () => {
