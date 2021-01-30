@@ -1,0 +1,16 @@
+#This project is built using react js.
+
+
+#Prerequisite: System should have Node js version 10.13 or higher version.
+#Download the project from git hub.
+
+#Once download is complete, please go to downloaded project folder in command prompt and then type+run the below commands(one by one):
+
+npm install
+
+npm start
+
+#If compiled successful, then the project should run on http://localhost:3000/
+
+
+Project is also hosted using firebase on https://vehicle-info-23793.web.app/
