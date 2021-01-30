@@ -47,14 +47,14 @@ const Vehicle = () => {
                         includeInputInList
                         options={options}
                         getOptionLabel={(option) => option.kentekenplaat}
-                        renderInput={(params) => <TextField {...params} variant="outlined" className="search-term" onChange={searchresult} />}
+                        renderInput={(params) => <TextField {...params} variant="outlined" className="search-term" placeholder="Vehicle Number" onChange={searchresult} />}
                         onChange={(event, value) => { getVehicleDetails(value) }}
                     />
                 </div>
             </div>
             {showcomponent ?
-                <div><div><Details className="character-item" data={vehicle_info} /> </div> 
-                <div> <Imagerow className="character-item" data={images.results} /></div></div>: null
+                <div><div><Details className="character-item" data={vehicle_info} /> </div>
+                    <div> <Imagerow className="character-item" data={images.results} /></div></div> : null
             }
 
         </div>

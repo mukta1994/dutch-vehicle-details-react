@@ -20,17 +20,17 @@ const Details = (props) => {
             <div>
                 <span>Fuel-description</span>
                 {props.data.brandstof ? (
-        <div className="vehicle-data">{
-            props.data && props.data.brandstof && props.data.brandstof.map(brands => {
-                return <div key={brands.brandstof_volgnummer}>{brands.brandstof_omschrijving}</div>
-            })
-        }
-        </div>
-      ) : (
-        <div style={{fontSize:"12px"}}>Data not available</div>
-      )}
+                    <div className="vehicle-data">{
+                        props.data && props.data.brandstof && props.data.brandstof.map(brands => {
+                            return <div key={brands.brandstof_volgnummer}>{brands.brandstof_omschrijving}</div>
+                        })
+                    }
+                    </div>) :
+                    (
+                        <div style={{ fontSize: "12px" }}>Data not available</div>
+                    )}
 
-               
+
             </div>
         </Card>
     );
