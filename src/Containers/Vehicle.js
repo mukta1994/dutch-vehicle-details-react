@@ -47,7 +47,7 @@ const Vehicle = () => {
                         includeInputInList
                         options={options}
                         getOptionLabel={(option) => option.kentekenplaat}
-                        renderInput={(params) => <TextField {...params} variant="outlined" className="search-term" placeholder="Vehicle number" onChange={searchresult} />}
+                        renderInput={(params) => <TextField {...params} variant="outlined" className="search-term" placeholder="Vehicle Number" onChange={searchresult} />}
                         onChange={(event, value) => { getVehicleDetails(value) }}
                     />
                 </div>
