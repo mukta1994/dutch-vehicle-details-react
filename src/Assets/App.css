@@ -78,17 +78,23 @@
 }
 
 .row-image{
-  object-fit: contain;
-  width:100%;
-  max-height:200px;
-  margin-right: 8px;
-  max-width: 400px;
-  height: auto;
-  transition: transform 450ms
+  position: relative;
+  display: inline-block;
+  width: 21%;
+  max-height: 260px;
+  -webkit-transition: width .35s cubic-bezier(.215,.61,.355,1),margin-left .35s cubic-bezier(.215,.61,.355,1),max-height .35s cubic-bezier(.215,.61,.355,1);
+  transition: width .35s cubic-bezier(.215,.61,.355,1),margin-left .35s cubic-bezier(.215,.61,.355,1),max-height .35s cubic-bezier(.215,.61,.355,1);
+  margin: 2px 6px 2px 2px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  white-space: normal;
 }
 
 .row-image:hover{
-  transform: scale(2);
+  max-height:400px;
+  z-index: 2;
+  width: 30%;
 }
 
 
@@ -114,6 +120,18 @@
     text-align: left;
     padding-left: 8px;
     margin-top:-20px;
+  }
+
+  .row-image{
+    width: 50%;
+  max-height: 170px;
+
+  }
+
+  .row-image:hover{
+    width: 80%;
+    max-height: 300px;
+
   }
 
 }

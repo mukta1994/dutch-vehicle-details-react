@@ -33,6 +33,7 @@ const Vehicle = () => {
             else if (list.totalItemCount !== 0)
                 setOptions(list._embedded.kenteken)
         }
+         
 
     }
 
