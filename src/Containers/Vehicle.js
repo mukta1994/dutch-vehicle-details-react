@@ -18,8 +18,7 @@ const Vehicle = () => {
             if(list.error){
                 alert("there is some some issue with api call or something went wrong")
             }
-            else
-            if (list.totalItemCount !== 0)
+            else if (list.totalItemCount !== 0)
                 setOptions(list._embedded.kenteken)
         }
 
