@@ -15,7 +15,10 @@ const Vehicle = () => {
     async function searchresult(e) {
         if (e.target.value) {
             const list = await getVehiclenumberPlates(e.target.value)
-            if (list.totalItemCount !== 0)
+            if(list.error){
+                alert("there is some some issue with api call or something went wrong")
+            }
+            else if (list.totalItemCount !== 0)
                 setOptions(list._embedded.kenteken)
         }
 
