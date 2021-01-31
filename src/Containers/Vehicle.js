@@ -34,7 +34,7 @@ const Vehicle = () => {
             else
                 setVehicle_info(info)
             const imagesres=await getRelatedImages(vehicle_data.handelsbenaming)
-            if(imagesres!==0)
+            if(imagesres===0)
             {
                 alert("there is some some issue with api call or something went wrong")
             }
