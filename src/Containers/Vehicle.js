@@ -16,7 +16,7 @@ const Vehicle = () => {
         if (e.target.value) {
             const list = await getVehiclenumberPlates(e.target.value)
             if(list===0){
-                alert("there is some some issue with api call or something went wrong")
+                alert("Something went wrong or the data is not available")
             }
             else if (list.totalItemCount !== 0)
                 setOptions(list._embedded.kenteken)
@@ -29,14 +29,14 @@ const Vehicle = () => {
             const info = await getVehicleData(vehicle_data.kentekenplaat)
             if(info===0)
             {
-                alert("there is some some issue with api call or something went wrong")
+                alert("Something went wrong or the data is not available")
             }
             else
                 setVehicle_info(info)
             const imagesres=await getRelatedImages(vehicle_data.handelsbenaming)
-            if(imagesres!==0)
+            if(imagesres===0)
             {
-                alert("there is some some issue with api call or something went wrong")
+                alert("Something went wrong or the data is not available")
             }
             else
                 setimages(imagesres)
