@@ -73,6 +73,8 @@ const Vehicle = () => {
         <div>
             <div className="top-section-home" >
                 <div className="search-plate" style={{ margin: 'auto' }} >
+                <div className="search-heading">Please enter your vehicle plate number</div>
+
                     <Autocomplete
                         id="combo-box-demo"
                         includeInputInList
