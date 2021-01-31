@@ -6,6 +6,8 @@ export const getVehicleData = async (vin) => {
   try {
     const response = await fetch(BASE_URL_OVERHEID + `/${vin}?ovio-api-key=${OVIO_APIKEY}`)
     const data = await response.json();
+    if(response.status!==200)
+      return 0
     return data;
   } catch (error) {
     console.log(error, "error")
@@ -18,6 +20,8 @@ export const getVehiclenumberPlates = async (query) => {
   try {
     const response = await fetch(BASE_URL_OVERHEID + `?query=${query}&ovio-api-key=${OVIO_APIKEY}`)
     const data = await response.json();
+    if(response.status!==200)
+      return 0
     return data;
   } catch (error) {
     console.log(error, "error")
