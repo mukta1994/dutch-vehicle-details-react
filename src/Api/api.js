@@ -29,6 +29,8 @@ export const getRelatedImages = async (tradeName) => {
   try {
     const response = await fetch(BASE_URL_UNSPLASH + `photos?page=1&query=${tradeName}&client_id=${UNSPLASH_APIKEY}`)
     const data = await response.json();
+    if(response.status!==200)
+      return 0
     return data;
   } catch (error) {
     console.log(error, "error")
