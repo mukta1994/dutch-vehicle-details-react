@@ -14,15 +14,6 @@ const Vehicle = () => {
     const [open, setOpen] = useState( false);
     const [options, setOptions] = useState([]);
 
-  
-    //close function to close snackbar
-    const handleClose = (event, reason) => {
-      if (reason === 'clickaway') {
-        return;
-      }
-      setOpen(false);
-    };
-
     //searched results of matching vehicle numbers
     async function searchresult(e) {
         if (e.target.value) {
@@ -32,9 +23,7 @@ const Vehicle = () => {
             }
             else if (list.totalItemCount !== 0)
                 setOptions(list._embedded.kenteken)
-        }
-         
-
+        } 
     }
 
     //get vehicle details of specific vehicle using vehicle number 
@@ -67,8 +56,6 @@ const Vehicle = () => {
     }
     
 
-
-
     return (
         <div>
             <div className="top-section-home" >
@@ -90,7 +77,7 @@ const Vehicle = () => {
                     <div> <Imagerow className="character-item" data={images.results} /></div></div> : null
             }
         {open ?
-            <div><PositionedSnackbar open={open} handleClose={handleClose} message={"try"} ></PositionedSnackbar> </div>
+            <div><PositionedSnackbar open={true} message={"try"} ></PositionedSnackbar> </div>
             : null}
             
 

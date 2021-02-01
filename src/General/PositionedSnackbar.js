@@ -14,11 +14,24 @@ export default function PositionedSnackbar(props) {
       });
       const { vertical, horizontal } = state;
 
+      const [open, setOpen] = useState( props.open);
+
+  
+      //close function to close snackbar
+      const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+        setOpen(false);
+      };
+
+
+
     return (
       <div>
-        <Snackbar anchorOrigin={{ vertical, horizontal }} open={props.open} autoHideDuration={6000} onClose={props.handleClose}>
-          <Alert onClose={props.handleClose} severity="error">
-            Something went wrong or the data is not available {props.message}
+        <Snackbar anchorOrigin={{ vertical, horizontal }} open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity="error">
+            Something went wrong or the data is not available
           </Alert>
         </Snackbar>
       </div>
